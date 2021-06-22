@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>screenshot</title>
+    <style>
+      .button1 {background-color: green;}
+      .button2 {background-color: red;}   
+
+
+
+      .box1 {
+          background-color: rgb(170, 170, 243);
+          padding-top: 10px;
+          padding-right: 20px;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          border: blue;
+          border-radius: 2px;
+          box-shadow: 1px 1px 1px black;
+      }
+    </style>
+    
+</head>
+
+<body>  
+</br>
+</br>
+
+    <span class = box1 id='userpara'></span> 
+    <input class = button1 type='button' id='but_upvote' value='Upvote' onclick='upvotecounter()'>
+    <input class = button2 button2 type='button' id='but_downvote' value='Downvote' onclick='downvotecounter()'>
+
+        <script>
+        let counter = 0
+        document.getElementById("userpara").innerHTML = counter;
+            function upvotecounter(){
+                counter+=1;
+                document.getElementById("userpara").innerHTML = counter;
+            } 
+            function downvotecounter(){
+                counter-=1;
+                document.getElementById("userpara").innerHTML = counter;
+            }      
+        </script>
+     
+</body>
+</html>

@@ -2,12 +2,13 @@
 <head>
     <title>screenshot</title>
     <style>
-      .button1 {background-color: green;}
-      .button2 {background-color: red;}   
-
-
-
-      .box1 {
+        .button1 {background-color: transparent;
+        border: transparent
+        }
+        .button2 {background-color: transparent;
+        border: transparent;}  
+        .box1 {
+            margin: 10px;
           background-color: rgb(170, 170, 243);
           padding-top: 10px;
           padding-right: 20px;
@@ -15,20 +16,38 @@
           padding-left: 20px;
           border: blue;
           border-radius: 2px;
-          box-shadow: 1px 1px 1px black;
-      }
+          box-shadow: 1px black;
+        }
+        .triangle{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 0;
+	        height: 0;
+	        border-left: 15px solid transparent;
+	        border-right: 15px solid transparent;
+            border-top: none;
+            border-bottom: none;
+            padding:0;
+            background: none;
+        }
+        .up {
+            border-bottom: 30px solid red;
+        }
+        .down {
+            border-top: 30px solid red;
+        }
     </style>
     
 </head>
 
 <body>  
-</br>
-</br>
-
     <span class = box1 id='userpara'></span> 
-    <input class = button1 type='button' id='but_upvote' value='Upvote' onclick='upvotecounter()'>
-    <input class = button2 button2 type='button' id='but_downvote' value='Downvote' onclick='downvotecounter()'>
-
+    <br>
+    <button class="triangle up" id='but_upvote' value='Upvote' onclick='upvotecounter()'></button>
+    <br>
+    <button class="triangle down" id='but_downvote' value='Downvote' onclick='downvotecounter()'></button>
         <script>
         let counter = 0
         document.getElementById("userpara").innerHTML = counter;
